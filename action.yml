@@ -11,7 +11,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - run |
+    - run: |
       echo $GITHUB_ACTION_PATH/main.rb
     - run: ruby -W0 $GITHUB_ACTION_PATH/main.rb
       shell: sh
