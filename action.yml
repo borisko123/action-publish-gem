@@ -17,5 +17,7 @@ runs:
       shell: sh
     - run: ruby -v
       shell: sh
+    - run: cat  $GITHUB_ACTION_PATH/main.rb
+      shell: sh
       env:
         API_KEY: ${{inputs.api_key}}
