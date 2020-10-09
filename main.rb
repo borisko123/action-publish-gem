@@ -18,7 +18,9 @@ END_OF_CREDENTIALS
 FileUtils.mkdir_p(credentials_dir_path)
 File.open(credentials_file_path, 'w') { |f| f.write(credentials) }
 FileUtils.chmod(0o600, credentials_file_path)
-
+puts ">> debug"
+puts credentials_file_path
+system("ls -al #{credentials_dir_path}")
 begin
   gemspec_files.each do |gemspec_file|
     gemspec = Gem::Specification.load(gemspec_file)
